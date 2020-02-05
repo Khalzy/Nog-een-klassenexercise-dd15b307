@@ -21,3 +21,4 @@ foreach ($klasgenoten as $v) {
 }
 
 print_r($result);
+echo ($result);
