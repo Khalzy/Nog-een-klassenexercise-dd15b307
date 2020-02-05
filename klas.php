@@ -1,22 +1,17 @@
 <?php
 
-$klas = readline("Wie zit er in de klas?" . PHP_EOL);
+
+echo ("Wie zit er in de klas?" . "\n");
 
 
-$klasgenoten = array();
-
-
-
-for ($i = 0; $i <= $klas; $i++) {
-
-    array_push($klasgenoten, $klas);
+if (is_numeric($klas)) {
+    echo ("Dit is geen naam");
+    exit;
 }
 
-foreach ($klasgenoten as $v) {
-    echo "de studenten in de klas zijn:";
-    $studentenlijst =  $v;
-    $result = explode(" ", $studentenlijst);
-}
+$r = explode(" ", readline());
 
-print_r($result);
-echo ($result);
+
+foreach ($r as $klas) {
+    echo ($klas . PHP_EOL);
+}
